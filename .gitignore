@@ -1,8 +1,4 @@
 node_modules/
-bower_components/
 *.log
-
-build/
-dist/
 
 # Inspired by https://github.com/github/gitignore
