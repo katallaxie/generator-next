@@ -2,21 +2,21 @@
 'use strict'
 // modules
 import 'babel-polyfill';
-import {Base} from 'yeoman-generator';
-import util from 'util';
-import chalk from 'chalk';
-import yosay from 'yosay';
-import path from 'path';
+import {Base as Yeoman} from 'yeoman-generator';
+import {default as Util} from 'util';
+import {default as Chalk} from 'chalk';
+import {default as Yosay} from 'yosay';
+import {default as Path} from 'path';
 
 // extend the yeoman.base and export as module
-export default class Generator extends Base {
+export default class Generator extends Yeoman {
 
   constructor(...args) {
     super(...args);
 
     this.argument('appName', {
       type: String,
-      defaults: path.basename(process.cwd())
+      defaults: Path.basename(process.cwd())
     });
   }
 
@@ -30,7 +30,7 @@ export default class Generator extends Base {
 
       greeting() {
         // greeting
-        console.log(yosay('\'Ey \'Yo! So, u wanna start with your next project? Alright!'));
+        console.log(Yosay('\'Ey \'Yo! So, u wanna start with your next project? Alright!'));
       },
 
       appName() {
