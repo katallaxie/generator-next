@@ -1,5 +1,8 @@
+/* @flow */
+
 // syntax
 'use strict'
+
 // modules
 import 'babel-polyfill';
 import {Base as Yeoman} from 'yeoman-generator';
@@ -11,7 +14,7 @@ import {default as Path} from 'path';
 // extend the yeoman.base and export as module
 export default class Generator extends Yeoman {
 
-  constructor(...args) {
+  constructor(...args: Array<any>) {
     super(...args);
 
     this.argument('appName', {
@@ -24,7 +27,7 @@ export default class Generator extends Yeoman {
     this.props = {};
   }
 
-  get prompting() {
+  get prompting() : Object {
 
     return {
 
